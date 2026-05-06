@@ -5,37 +5,37 @@
   --font-serif: "Cormorant Garamond", serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   
-  --color-brand-paper: #f5f2ed;
-  --color-brand-ink: #1a1a1a;
-  --color-brand-accent: #064e3b; /* Deep Emerald */
-  --color-brand-gold: #b2945d;
+  --color-brand-paper: #f8fafc; /* slate-50 */
+  --color-brand-ink: #0f172a; /* slate-900 */
+  --color-brand-muted: #64748b; /* slate-500 */
+  --color-brand-border: #e2e8f0; /* slate-200 */
+  --color-brand-accent: #1e293b; /* slate-800 */
 }
 
 @layer base {
   body {
-    @apply bg-brand-paper text-brand-ink font-sans antialiased selection:bg-brand-accent selection:text-white;
+    @apply bg-brand-paper text-brand-ink font-sans antialiased selection:bg-brand-ink selection:text-white;
   }
   
   h1, h2, h3, h4, .font-serif {
-    @apply font-serif;
+    @apply font-serif text-brand-ink;
   }
 
   /* Sophisticated scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
   ::-webkit-scrollbar-track {
-    background: #f5f2ed;
+    background: #f8fafc;
   }
   ::-webkit-scrollbar-thumb {
-    background: #d1cfcb;
-    border-radius: 10px;
+    background: #e2e8f0;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #b2945d;
+    background: #cbd5e1;
   }
 }
 
-.nav-link-underline {
-  @apply relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-brand-gold after:transition-all after:duration-300 hover:after:w-full;
+.nav-link-active {
+  @apply text-brand-ink border-b border-brand-ink pb-0.5;
 }

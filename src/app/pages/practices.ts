@@ -7,59 +7,53 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [MatIconModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section class="pt-40 pb-20 bg-brand-paper">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="max-w-3xl mb-24">
-          <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-brand-gold mb-6 block">Areas of Specialization</span>
-          <h1 class="text-5xl md:text-7xl font-serif font-bold leading-[0.9] mb-10">
-            Comprehensive <br> <span class="italic font-medium text-brand-gold">Legal Strategies</span>
+    <section class="pt-32 pb-20 bg-brand-paper">
+      <div class="max-w-7xl mx-auto px-12">
+        <div class="max-w-2xl mb-24">
+          <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-brand-muted mb-6 block">Practice Specializations</span>
+          <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-8">
+            Sophisticated Counsel for <br> <span class="italic font-normal">Global Interests.</span>
           </h1>
-          <p class="text-lg opacity-80 leading-relaxed font-light">
-            Diverse expertise, singular focus. We provide specialized legal counsel across various sectors, ensuring tailored representation for every client's unique needs.
+          <p class="text-sm text-brand-muted leading-relaxed font-light max-w-lg">
+            Our firm specializes in protecting corporate integrity and individual legacy through meticulous litigation and strategic advisory across multi-jurisdictional boundaries.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 bg-white border border-brand-border divide-x divide-y divide-brand-border">
           @for (area of practiceAreas; track area.title) {
-            <div class="group">
-              <div class="relative mb-8 overflow-hidden aspect-video bg-brand-ink/5 rounded-sm">
-                <img [src]="area.image" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" alt="{{area.title}}" referrerpolicy="no-referrer">
-                <div class="absolute inset-0 bg-brand-accent/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </div>
-              <div class="space-y-4">
-                <div class="flex items-center gap-3">
-                  <div class="w-8 h-px bg-brand-gold"></div>
-                  <h3 class="text-2xl font-serif font-bold">{{ area.title }}</h3>
-                </div>
-                <p class="text-sm opacity-60 leading-relaxed min-h-[80px]">
+            <div class="p-16 flex flex-col justify-between hover:bg-slate-50 transition-colors">
+              <div>
+                <h3 class="text-sm font-serif font-bold text-brand-ink mb-4 uppercase tracking-widest">{{ area.title }}</h3>
+                <p class="text-[12px] text-brand-muted leading-relaxed mb-10 max-w-md">
                   {{ area.details }}
                 </p>
-                <ul class="space-y-2 pt-4">
+                <div class="grid grid-cols-1 gap-4">
                   @for (service of area.services; track service) {
-                    <li class="flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold opacity-80">
-                      <mat-icon class="text-[12px] h-[12px] w-[12px] text-brand-gold">check</mat-icon>
+                    <div class="flex items-center gap-3 text-[10px] uppercase tracking-[0.1em] font-bold text-brand-ink/70">
+                      <div class="w-1 h-1 bg-brand-border rounded-full"></div>
                       {{ service }}
-                    </li>
+                    </div>
                   }
-                </ul>
+                </div>
               </div>
+              <a href="#" class="text-[10px] uppercase font-bold tracking-tighter hover:underline mt-12 flex items-center gap-2">View Areas of Focus &rarr;</a>
             </div>
           }
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-32 bg-brand-ink text-brand-paper">
-       <div class="max-w-5xl mx-auto px-6 text-center space-y-10">
-          <h2 class="text-4xl md:text-6xl font-serif font-bold leading-tight">
-            Facing a <span class="italic font-normal text-brand-gold">Legal Challenge?</span>
+    <!-- Simple CTA -->
+    <section class="py-32 bg-white border-b border-brand-border">
+       <div class="max-w-4xl mx-auto px-12 text-center space-y-10">
+          <h2 class="text-3xl md:text-5xl font-serif font-bold">
+            Secure Your <span class="italic font-normal">Legacy.</span>
           </h2>
-          <p class="text-lg opacity-60 max-w-2xl mx-auto pb-4">
-            Our team is ready to provide the expertise and advocacy you need. Contact us today for a confidential consultation.
+          <p class="text-sm text-brand-muted max-w-sm mx-auto">
+            Our Client Services team is available for confidential discussions regarding global representation.
           </p>
-          <a href="mailto:contact&#64;lexpartners.com" class="inline-block px-12 py-5 bg-brand-gold text-brand-ink text-[13px] uppercase tracking-[0.2em] font-bold hover:bg-white transition-all duration-300">
-            Request Consultation
+          <a routerLink="/contact" class="inline-block px-10 py-3 border border-brand-ink text-brand-ink text-[10px] uppercase tracking-widest font-bold hover:bg-brand-ink hover:text-white transition-all">
+            Contact Client Services
           </a>
        </div>
     </section>

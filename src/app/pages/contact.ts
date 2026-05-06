@@ -8,29 +8,26 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [ReactiveFormsModule, MatIconModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section class="pt-40 pb-32 bg-brand-paper">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="pt-32 pb-32 bg-brand-paper">
+      <div class="max-w-7xl mx-auto px-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
           <!-- Contact Info -->
           <div class="lg:col-span-5 space-y-16">
             <div class="max-w-md">
-              <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-brand-gold mb-6 block">Get in Touch</span>
-              <h1 class="text-5xl md:text-7xl font-serif font-bold leading-[0.9] mb-10">
-                Begin Your <br> <span class="italic font-medium text-brand-gold">Consultation</span>
+              <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-brand-muted mb-6 block">Contact Client Services</span>
+              <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-10">
+                Begin Your <br> <span class="italic font-normal">Consultation.</span>
               </h1>
-              <p class="text-lg opacity-80 leading-relaxed font-light">
+              <p class="text-sm text-brand-muted leading-relaxed font-light">
                 Professional, discreet, and decisive. We are here to listen and provide the legal leadership your situation demands.
               </p>
             </div>
 
             <div class="space-y-10">
-              <div class="flex items-start gap-6">
-                <div class="w-12 h-12 bg-white flex items-center justify-center text-brand-gold shadow-sm">
-                   <mat-icon>location_on</mat-icon>
-                </div>
+              <div class="flex items-start gap-8 border-l border-brand-border pl-8">
                 <div>
-                  <h4 class="font-serif text-xl font-bold uppercase tracking-wide mb-2 italic">Headquarters</h4>
-                  <p class="text-sm opacity-60 leading-relaxed">
+                  <h4 class="font-serif text-sm font-bold uppercase tracking-widest mb-2 italic">Headquarters</h4>
+                  <p class="text-[12px] text-brand-muted leading-relaxed uppercase tracking-tighter">
                     1200 Avenue of the Americas,<br>
                     Suite 4500,<br>
                     New York, NY 10036
@@ -38,85 +35,77 @@ import { MatIconModule } from '@angular/material/icon';
                 </div>
               </div>
 
-              <div class="flex items-start gap-6">
-                <div class="w-12 h-12 bg-white flex items-center justify-center text-brand-gold shadow-sm">
-                   <mat-icon>phone</mat-icon>
-                </div>
+              <div class="flex items-start gap-8 border-l border-brand-border pl-8">
                 <div>
-                  <h4 class="font-serif text-xl font-bold uppercase tracking-wide mb-2 italic">Phone</h4>
-                  <p class="text-sm opacity-60 leading-relaxed">
-                    Main Office: +1 (212) 555-0198<br>
-                    Emergencies: +1 (212) 555-0190
+                  <h4 class="font-serif text-sm font-bold uppercase tracking-widest mb-2 italic">Direct Line</h4>
+                  <p class="text-[12px] text-brand-muted leading-relaxed uppercase tracking-widest font-bold">
+                    +1 (212) 555-0198
                   </p>
                 </div>
               </div>
 
-              <div class="flex items-start gap-6">
-                <div class="w-12 h-12 bg-white flex items-center justify-center text-brand-gold shadow-sm">
-                   <mat-icon>email</mat-icon>
-                </div>
+              <div class="flex items-start gap-8 border-l border-brand-border pl-8">
                 <div>
-                  <h4 class="font-serif text-xl font-bold uppercase tracking-wide mb-2 italic">Electronic</h4>
-                  <p class="text-sm opacity-60 leading-relaxed">
-                    contact&#64;lexpartners.com<br>
-                    press&#64;lexpartners.com
+                  <h4 class="font-serif text-sm font-bold uppercase tracking-widest mb-2 italic">Inquiries</h4>
+                  <p class="text-[12px] text-brand-muted leading-relaxed uppercase tracking-widest font-bold">
+                    contact&#64;lexpartners.com
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Form -->
-          <div class="lg:col-span-7 bg-white p-12 shadow-2xl shadow-brand-ink/5 border border-brand-ink/5">
+          <!-- Form Area -->
+          <div class="lg:col-span-7 bg-white p-16 border border-brand-border shadow-sm">
              <div class="mb-12">
-               <h3 class="font-serif text-3xl font-bold mb-4">Request a Case Review</h3>
-               <p class="text-sm opacity-60">All communications are privileged and confidential.</p>
+               <h3 class="font-serif text-2xl font-bold mb-4 uppercase tracking-widest">Case Review Request</h3>
+               <p class="text-[11px] text-brand-muted uppercase tracking-widest font-bold">All communications are privileged and confidential.</p>
              </div>
 
-              <form [formGroup]="contactForm" class="space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div class="space-y-2">
-                    <label for="name" class="text-[10px] uppercase tracking-widest font-bold opacity-40">Full Name</label>
-                    <input id="name" type="text" formControlName="name" class="w-full border-b border-brand-ink/10 py-3 focus:outline-none focus:border-brand-gold transition-colors font-serif text-lg">
-                  </div>
-                  <div class="space-y-2">
-                    <label for="email" class="text-[10px] uppercase tracking-widest font-bold opacity-40">Email Address</label>
-                    <input id="email" type="email" formControlName="email" class="w-full border-b border-brand-ink/10 py-3 focus:outline-none focus:border-brand-gold transition-colors font-serif text-lg">
-                  </div>
-                </div>
+             <form [formGroup]="contactForm" class="space-y-10">
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                 <div class="space-y-2">
+                   <label for="name" class="text-[9px] uppercase tracking-widest font-bold text-brand-muted">Full Name</label>
+                   <input id="name" type="text" formControlName="name" class="w-full border-b border-brand-border py-4 focus:outline-none focus:border-brand-ink transition-colors font-serif text-base bg-transparent">
+                 </div>
+                 <div class="space-y-2">
+                   <label for="email" class="text-[9px] uppercase tracking-widest font-bold text-brand-muted">Email Address</label>
+                   <input id="email" type="email" formControlName="email" class="w-full border-b border-brand-border py-4 focus:outline-none focus:border-brand-ink transition-colors font-serif text-base bg-transparent">
+                 </div>
+               </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div class="space-y-2">
-                    <label for="phone" class="text-[10px] uppercase tracking-widest font-bold opacity-40">Phone Number</label>
-                    <input id="phone" type="tel" formControlName="phone" class="w-full border-b border-brand-ink/10 py-3 focus:outline-none focus:border-brand-gold transition-colors font-serif text-lg">
-                  </div>
-                  <div class="space-y-2">
-                    <label for="area" class="text-[10px] uppercase tracking-widest font-bold opacity-40">Practice Area</label>
-                    <select id="area" formControlName="area" class="w-full border-b border-brand-ink/10 py-3 focus:outline-none focus:border-brand-gold transition-colors font-serif text-lg bg-transparent">
-                       <option value="">Select an Area</option>
-                       <option value="corporate">Corporate Law</option>
-                       <option value="ip">Intellectual Property</option>
-                       <option value="litigation">Civil Litigation</option>
-                       <option value="family">Family & Private Wealth</option>
-                       <option value="realestate">Real Estate Law</option>
-                       <option value="criminal">Criminal Defense</option>
-                    </select>
-                  </div>
-                </div>
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                 <div class="space-y-2">
+                   <label for="phone" class="text-[9px] uppercase tracking-widest font-bold text-brand-muted">Phone Number</label>
+                   <input id="phone" type="tel" formControlName="phone" class="w-full border-b border-brand-border py-4 focus:outline-none focus:border-brand-ink transition-colors font-serif text-base bg-transparent">
+                 </div>
+                 <div class="space-y-2">
+                   <label for="area" class="text-[9px] uppercase tracking-widest font-bold text-brand-muted">Practice Area</label>
+                   <select id="area" formControlName="area" class="w-full border-b border-brand-border py-4 focus:outline-none focus:border-brand-ink transition-colors font-serif text-base bg-transparent">
+                      <option value="">Select an Area</option>
+                      <option value="corporate">Corporate Law</option>
+                      <option value="ip">Intellectual Property</option>
+                      <option value="litigation">Civil Litigation</option>
+                      <option value="family">Family & Private Wealth</option>
+                      <option value="realestate">Real Estate Law</option>
+                      <option value="criminal">Criminal Defense</option>
+                   </select>
+                 </div>
+               </div>
 
-                <div class="space-y-2">
-                  <label for="message" class="text-[10px] uppercase tracking-widest font-bold opacity-40">Preliminary Message</label>
-                  <textarea id="message" formControlName="message" rows="4" class="w-full border-b border-brand-ink/10 py-3 focus:outline-none focus:border-brand-gold transition-colors font-serif text-lg resize-none"></textarea>
-                </div>
+               <div class="space-y-2">
+                 <label for="message" class="text-[9px] uppercase tracking-widest font-bold text-brand-muted">Preliminary Message</label>
+                 <textarea id="message" formControlName="message" rows="4" class="w-full border-b border-brand-border py-4 focus:outline-none focus:border-brand-ink transition-colors font-serif text-base bg-transparent resize-none"></textarea>
+               </div>
 
-               <div class="pt-6">
-                 <button type="submit" class="w-full py-5 bg-brand-ink text-white text-[12px] uppercase tracking-[0.3em] font-bold hover:bg-brand-accent transition-all duration-500 shadow-lg" [disabled]="contactForm.invalid">
-                    Send Request Securely
+               <div class="pt-10">
+                 <button type="submit" class="px-12 py-4 bg-brand-ink text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-slate-800 transition-all border border-brand-ink disabled:opacity-30" [disabled]="contactForm.invalid">
+                    Submit Secure Request
                  </button>
                </div>
                
-               <p class="text-[10px] opacity-40 leading-relaxed text-center italic">
-                 Disclaimer: Submitting this form does not establish an attorney-client relationship. Please do not send sensitive or time-critical information via this form.
+               <p class="text-[9px] text-brand-muted leading-relaxed italic pt-4">
+                 Note: Submitting this form does not establish an attorney-client relationship. Please do not send sensitive or time-critical information via this form.
                </p>
              </form>
           </div>

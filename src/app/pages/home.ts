@@ -10,99 +10,70 @@ import { animate } from 'motion';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
-      <!-- Background Graphic -->
-      <div class="absolute inset-0 z-0">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-accent/5 skew-x-[-15deg] translate-x-20"></div>
-      </div>
-
-      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
-        <div class="space-y-10 animate-fade-in">
-          <div class="space-y-4">
-            <span class="text-[12px] uppercase tracking-[0.4em] font-semibold text-brand-gold opacity-80">Est. 1984 — New York</span>
-            <h1 class="text-6xl md:text-8xl leading-[0.9] font-serif font-bold tracking-tight">
-              Sophisticated <br> <span class="italic text-brand-gold font-medium">Counsel</span> for a <br> Changing World
-            </h1>
+    <section class="relative min-h-[85vh] flex items-center bg-brand-paper border-b border-brand-border">
+      <div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-0 w-full h-full">
+        <div class="lg:col-span-12 py-20 lg:py-32 space-y-12">
+          <div class="space-y-6 max-w-4xl">
+             <p class="text-[10px] uppercase tracking-[0.3em] text-brand-muted font-bold">Established 1984 &bull; New York &middot; London</p>
+             <h1 class="text-5xl md:text-7xl font-serif leading-tight text-brand-ink font-semibold">
+               Sophisticated <span class="italic font-normal">Legal Solutions</span> <br> for Complex Global Interests.
+             </h1>
           </div>
           
-          <p class="text-lg opacity-80 max-w-lg leading-relaxed font-light">
-            Lex & Partners provides elite legal representation across corporate, intellectual property, and international law, helping visionaries navigate complex global landscapes.
-          </p>
-
-          <div class="flex flex-wrap gap-6 pt-4">
-            <a routerLink="/contact" class="px-8 py-4 bg-brand-ink text-white text-[13px] uppercase tracking-[0.2em] font-bold hover:bg-brand-accent transition-all duration-300 shadow-xl shadow-brand-ink/10">
-              Get Started
-            </a>
-            <a routerLink="/practices" class="px-8 py-4 border border-brand-ink/20 text-[13px] uppercase tracking-[0.2em] font-bold hover:bg-brand-ink hover:text-white transition-all duration-300">
-              Our Expertise
-            </a>
-          </div>
-
-          <div class="grid grid-cols-3 gap-10 pt-16 border-t border-brand-ink/10">
-            <div>
-              <div class="text-3xl font-serif font-bold mb-1">40+</div>
-              <div class="text-[10px] uppercase tracking-widest opacity-60">Years Excellence</div>
-            </div>
-            <div>
-              <div class="text-3xl font-serif font-bold mb-1">200+</div>
-              <div class="text-[10px] uppercase tracking-widest opacity-60">Legal Experts</div>
-            </div>
-            <div>
-              <div class="text-3xl font-serif font-bold mb-1">15</div>
-              <div class="text-[10px] uppercase tracking-widest opacity-60">Global Offices</div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <p class="text-sm text-brand-muted leading-relaxed max-w-sm">
+              Providing comprehensive counsel across multi-jurisdictional boundaries. Our firm specializes in protecting corporate integrity and individual legacy through meticulous litigation and strategic advisory.
+            </p>
+            <div class="flex gap-8">
+               <div class="border-l border-brand-border pl-6">
+                 <p class="text-3xl font-serif text-brand-ink">142</p>
+                 <p class="text-[10px] uppercase tracking-wider text-brand-muted font-bold">Client Engagements</p>
+               </div>
+               <div class="border-l border-brand-border pl-6">
+                 <p class="text-3xl font-serif text-brand-ink">38</p>
+                 <p class="text-[10px] uppercase tracking-wider text-brand-muted font-bold">Senior Partners</p>
+               </div>
             </div>
           </div>
-        </div>
 
-        <div class="hidden lg:block relative">
-          <div class="aspect-[4/5] bg-brand-ink overflow-hidden rounded-sm relative group">
-            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200" 
-              alt="Law Firm Office" 
-              class="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
-              referrerpolicy="no-referrer">
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-10 left-10 right-10">
-              <div class="w-12 h-px bg-brand-gold mb-6"></div>
-              <p class="font-serif italic text-2xl text-white">"Justice is the constant and perpetual will to allu everyone their due."</p>
-              <p class="text-[10px] uppercase tracking-widest text-brand-gold mt-4 font-bold">— Ulpian</p>
-            </div>
+          <div class="flex gap-4 pt-4">
+             <a routerLink="/contact" class="px-6 py-3 border border-brand-ink text-brand-ink text-[10px] uppercase tracking-widest font-bold hover:bg-brand-ink hover:text-white transition-all">
+                Client Services
+             </a>
+             <a routerLink="/practices" class="px-6 py-3 bg-brand-ink text-white text-[10px] uppercase tracking-widest font-bold hover:bg-brand-accent transition-all">
+                Practice Areas
+             </a>
           </div>
-          <!-- Decorative element -->
-          <div class="absolute -bottom-10 -right-10 w-40 h-40 border border-brand-gold/30 -z-10 rounded-sm"></div>
         </div>
       </div>
     </section>
 
-    <!-- Services Highlights -->
-    <section class="py-32 bg-white relative">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
-          <div class="space-y-6">
-            <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-gold">Our Expertise</span>
-            <h2 class="text-4xl md:text-5xl font-serif font-bold leading-tight max-w-xl">
-              Tailored Legal Solutions for <span class="italic font-normal">Complex Challenges</span>
-            </h2>
-          </div>
-          <a routerLink="/practices" class="group flex items-center gap-3 text-[12px] uppercase tracking-widest font-bold">
-            View All Practices 
-            <mat-icon class="text-brand-gold group-hover:translate-x-2 transition-transform">arrow_forward</mat-icon>
-          </a>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Bordered Grid Section -->
+    <section class="bg-white border-b border-brand-border h-full">
+       <div class="max-w-7xl mx-auto px-0 grid grid-cols-1 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-brand-border">
           @for (practice of highlightPractices; track practice.title) {
-            <div class="p-10 border border-brand-ink/5 hover:border-brand-gold transition-all duration-500 group relative overflow-hidden">
-               <div class="absolute top-0 right-0 w-24 h-24 bg-brand-gold/5 rounded-bl-full translate-x-10 -translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500"></div>
-               <mat-icon class="text-4xl text-brand-accent mb-8">{{ practice.icon }}</mat-icon>
-               <h3 class="text-2xl font-serif font-bold mb-4">{{ practice.title }}</h3>
-               <p class="text-sm opacity-60 leading-relaxed mb-8">
-                 {{ practice.description }}
-               </p>
-               <a routerLink="/practices" class="text-[11px] uppercase tracking-widest font-bold border-b border-brand-gold pb-1">Learn More</a>
+            <div class="p-16 flex flex-col justify-between hover:bg-slate-50 transition-colors group">
+               <div>
+                  <h3 class="text-sm font-serif font-bold text-brand-ink mb-4 uppercase tracking-widest">{{ practice.title }}</h3>
+                  <p class="text-[12px] text-brand-muted leading-relaxed">
+                    {{ practice.description }}
+                  </p>
+               </div>
+               <a routerLink="/practices" class="text-[10px] uppercase font-bold tracking-widest hover:underline mt-10 flex items-center gap-2">
+                 View Details <mat-icon class="scale-50">arrow_forward</mat-icon>
+               </a>
             </div>
           }
-        </div>
-      </div>
+          <div class="p-16 flex flex-col justify-between bg-brand-paper">
+             <div>
+                <h3 class="text-sm font-serif font-bold text-brand-ink mb-4 uppercase tracking-widest">Global Reach</h3>
+                <p class="text-[12px] text-brand-muted leading-relaxed">
+                  Navigating legal complexities across international borders with specialized offices in Zurich, London, and Singapore.
+                </p>
+             </div>
+             <a routerLink="/team" class="text-[10px] uppercase font-bold tracking-widest hover:underline mt-10">Meet Our Team &rarr;</a>
+          </div>
+       </div>
     </section>
 
     <!-- Content Section -->

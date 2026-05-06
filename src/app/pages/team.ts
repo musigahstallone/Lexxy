@@ -5,71 +5,70 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <section class="pt-40 pb-32 bg-brand-paper">
-      <div class="max-w-7xl mx-auto px-6">
+    <section class="pt-32 pb-32 bg-brand-paper">
+      <div class="max-w-7xl mx-auto px-12">
         <div class="flex flex-col lg:flex-row justify-between items-end gap-10 mb-24">
-          <div class="max-w-2xl">
-            <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-brand-gold mb-6 block">Our Legal Team</span>
-            <h1 class="text-5xl md:text-7xl font-serif font-bold leading-[0.9] mb-8">
-              Decades of <span class="italic font-medium text-brand-gold">Collective</span> Expertise
+          <div class="max-w-xl">
+            <span class="text-[10px] uppercase tracking-[0.4em] font-bold text-brand-muted mb-6 block">Our Legal Team</span>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold leading-tight mb-8">
+              Strategic <span class="italic font-normal">Advocacy</span> by Senior <span class="italic font-normal">Partners.</span>
             </h1>
-            <p class="text-lg opacity-80 leading-relaxed font-light">
-              Our partners and associates bring a wealth of experience from prestigious backgrounds, united by a shared commitment to legal excellence.
+            <p class="text-sm text-brand-muted leading-relaxed font-light">
+              Our partners bring a wealth of experience from prestigious global backgrounds, united by a shared commitment to meticulous legal excellence and client legacy.
             </p>
           </div>
           <div class="hidden lg:block text-right">
-             <div class="text-brand-gold font-serif italic text-4xl mb-4">"The strength of the firm is in our people."</div>
-             <div class="text-[10px] uppercase tracking-widest font-bold opacity-60">Lex & Partners Core Value</div>
+             <div class="text-brand-ink font-serif italic text-3xl mb-4">"Leadership is protecting the integrity of the law."</div>
+             <div class="text-[10px] uppercase tracking-widest font-bold text-brand-muted">Lex & Partners Core Value</div>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 bg-white border border-brand-border divide-x divide-y md:divide-y-0 divide-brand-border">
           @for (member of teamMembers; track member.name) {
-            <div class="group">
-              <div class="aspect-[3/4] overflow-hidden mb-6 rounded-sm border border-brand-ink/5 relative">
-                 <img [src]="member.image" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105" alt="{{member.name}}" referrerpolicy="no-referrer">
-                 <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <div class="p-10 flex flex-col group hover:bg-slate-50 transition-colors">
+              <div class="aspect-[3/4] overflow-hidden mb-8 border border-brand-border grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700">
+                 <img [src]="member.image" class="w-full h-full object-cover" alt="{{member.name}}" referrerpolicy="no-referrer">
               </div>
-              <div class="space-y-1">
-                 <h3 class="text-xl font-serif font-bold">{{ member.name }}</h3>
-                 <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-gold">{{ member.role }}</p>
-                 <div class="pt-4 h-px bg-brand-ink/10 group-hover:bg-brand-gold group-hover:w-full w-8 transition-all duration-500"></div>
-                 <p class="text-sm opacity-60 italic pt-4">{{ member.specialty }}</p>
+              <div class="space-y-2">
+                 <h3 class="text-sm font-serif font-bold tracking-widest uppercase">{{ member.name }}</h3>
+                 <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-brand-muted">{{ member.role }}</p>
+                 <p class="text-[11px] text-brand-muted italic pt-4 leading-relaxed">{{ member.specialty }}</p>
               </div>
+              <a href="#" class="text-[9px] uppercase font-bold tracking-widest hover:underline mt-12 block">Full Biography &rarr;</a>
             </div>
           }
         </div>
       </div>
     </section>
 
-    <!-- Professional Backgrounds -->
-    <section class="py-32 bg-white border-y border-brand-ink/5">
-       <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <!-- Professional Foundations -->
+    <section class="py-32 bg-white border-y border-brand-border">
+       <div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div class="space-y-10">
-             <h2 class="text-4xl md:text-5xl font-serif font-bold">Prestigious <br> Academic <span class="italic font-normal">Foundations</span></h2>
-             <p class="text-lg opacity-80 font-light leading-relaxed">
-               Our attorneys are graduates of some of the world's finest law schools, bringing diverse academic perspectives to every case.
+             <h2 class="text-3xl md:text-5xl font-serif font-bold">Academic <br/> <span class="italic font-normal text-brand-muted">Foundations</span></h2>
+             <p class="text-sm text-brand-muted font-light leading-relaxed max-w-md">
+               Our attorneys are graduates of the world's most rigorous legal institutions, ensuring a high-level theoretical framework for every practical challenge.
              </p>
-             <div class="flex flex-wrap gap-x-12 gap-y-8 opacity-40 grayscale">
-                <span class="font-serif text-2xl font-bold">HARVARD</span>
-                <span class="font-serif text-2xl font-bold">YALE</span>
-                <span class="font-serif text-2xl font-bold">OXFORD</span>
-                <span class="font-serif text-2xl font-bold">COLUMBIA</span>
+             <div class="flex flex-wrap gap-x-12 gap-y-8 opacity-20 contrast-0 grayscale">
+                <span class="font-serif text-xl font-bold">HARVARD</span>
+                <span class="font-serif text-xl font-bold">YALE</span>
+                <span class="font-serif text-xl font-bold">OXFORD</span>
+                <span class="font-serif text-xl font-bold">COLUMBIA</span>
              </div>
           </div>
-          <div class="bg-brand-paper p-12 rounded-sm space-y-8">
-             <div class="flex items-start gap-6">
-                <div class="w-12 h-12 bg-brand-ink flex items-center justify-center text-brand-gold font-bold">01</div>
-                <div>
-                   <h4 class="font-serif text-xl font-bold mb-2 uppercase tracking-wide">Global Insights</h4>
-                   <p class="text-sm opacity-60">Over 60% of our team has international legal experience, providing multicultural perspectives.</p>
+          <div class="bg-brand-paper p-16 space-y-12 border border-brand-border">
+             <div class="flex items-start gap-8">
+                <div class="text-brand-ink font-serif text-2xl font-bold border-b border-brand-ink">01</div>
+                <div class="space-y-2">
+                   <h4 class="font-serif text-sm font-bold uppercase tracking-widest">Multi-Jurisdictional</h4>
+                   <p class="text-[12px] text-brand-muted leading-relaxed">Attorneys qualified in multiple international jurisdictions, primarily serving global financial capitals.</p>
                 </div>
              </div>
-             <div class="flex items-start gap-6">
-                <div class="w-12 h-12 bg-brand-ink flex items-center justify-center text-brand-gold font-bold">02</div>
-                <div>
-                   <h4 class="font-serif text-xl font-bold mb-2 uppercase tracking-wide">Specialized focus</h4>
-                   <p class="text-sm opacity-60">Attorneys are strictly focused on their niches, ensuring deep expertise over generalist approaches.</p>
+             <div class="flex items-start gap-8">
+                <div class="text-brand-ink font-serif text-2xl font-bold border-b border-brand-ink">02</div>
+                <div class="space-y-2">
+                   <h4 class="font-serif text-sm font-bold uppercase tracking-widest">Industry Specific</h4>
+                   <p class="text-[12px] text-brand-muted leading-relaxed">Deep specialization within high-stakes markets ensures that no nuance of your industry is overlooked.</p>
                 </div>
              </div>
           </div>
